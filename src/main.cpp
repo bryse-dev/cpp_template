@@ -11,8 +11,7 @@
 
 // main() is where program execution begins.
 int main() {
-  OmicronAPI api("127.0.0.1", 5000);
-  std::cout << api.ToString() << std::endl;
+  OmicronAPI api("127.0.0.1", 12221);
 
   log4cpp::Appender *appender1 =
       new log4cpp::OstreamAppender("console", &std::cout);
@@ -22,7 +21,9 @@ int main() {
   root.setPriority(log4cpp::Priority::INFO);
   root.addAppender(appender1);
 
-  root.info("Test");
+  if (api.CheckStatus()) {
+    root.info("Successfully contacted OmicronD on " + api.ToString());
+  }
 
   return 0;
 }

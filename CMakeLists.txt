@@ -18,6 +18,12 @@ include_directories("${PROJECT_SOURCE_DIR}/thirdparty/log4cpp/include")
 include_directories("${PROJECT_BIN_DIR}/thirdparty/log4cpp/include")
 target_link_libraries(persei8 log4cpp ${CMAKE_THREAD_LIBS_INIT})
 
+# curlpp
+add_subdirectory("${PROJECT_SOURCE_DIR}/thirdparty/curlpp")
+include_directories("${PROJECT_SOURCE_DIR}/thirdparty/curlpp/include")
+include_directories("${PROJECT_BIN_DIR}/thirdparty/curlpp/include")
+target_link_libraries(persei8 curlpp)
+
 install(TARGETS persei8 RUNTIME DESTINATION ${CMAKE_BINARY_DIR}/bin)
 
 ##use c++11

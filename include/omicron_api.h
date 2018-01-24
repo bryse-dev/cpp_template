@@ -8,4 +8,5 @@ private:
 public:
   OmicronAPI(std::string address, int port);
   std::string ToString();
+  bool CheckStatus();
 };
