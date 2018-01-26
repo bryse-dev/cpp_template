@@ -24,6 +24,12 @@ include_directories("${PROJECT_SOURCE_DIR}/thirdparty/curlpp/include")
 include_directories("${PROJECT_BIN_DIR}/thirdparty/curlpp/include")
 target_link_libraries(persei8 curlpp)
 
+# yaml-cpp
+add_subdirectory("${PROJECT_SOURCE_DIR}/thirdparty/yaml-cpp")
+include_directories("${PROJECT_SOURCE_DIR}/thirdparty/yaml-cpp/include")
+include_directories("${PROJECT_BIN_DIR}/thirdparty/yaml-cpp/include")
+target_link_libraries(persei8 yaml-cpp)
+
 install(TARGETS persei8 RUNTIME DESTINATION ${CMAKE_BINARY_DIR}/bin)
 
 ##use c++11

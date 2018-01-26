@@ -1,0 +1,5 @@
+label:            "Local Daemon"
+omicron_address:  "127.0.0.1"
+omicron_port:     12221
+omicron_user:     "lrrr"
+omicron_password: "F00l!shhum4n"
