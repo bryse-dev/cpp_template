@@ -28,7 +28,7 @@ int main(int argc, char, const char *argv[]) {
   Configuration config("/home/bryson/github/persei8/etc/sample-config.yaml");
 
   // Create the object to interface with the Omicron daemon
-  OmicronAPI api(config.omicron_address, config.omicron_port);
+  OmicronAPI api(config.omicron_address, config.omicron_port, config.omicron_user, config.omicron_password);
 
   if (api.CheckStatus()) {
     root.info("Successfully contacted OmicronD on " + api.ToString());

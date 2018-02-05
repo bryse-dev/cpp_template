@@ -2,10 +2,9 @@
 #include <string>
 
 class Configuration {
-private:
-  std::string omicron_password_;
 
 public:
+  std::string omicron_password;
   std::string omicron_user;
   std::string omicron_address;
   int omicron_port;

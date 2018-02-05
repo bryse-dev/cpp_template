@@ -17,5 +17,5 @@ Configuration::Configuration(std::string config_file_location) {
   omicron_address = node["omicron_address"].as<std::string>();
   omicron_port = node["omicron_port"].as<int>();
   omicron_user = node["omicron_user"].as<std::string>();
-  omicron_password_ = node["omicron_password"].as<std::string>();
+  omicron_password = node["omicron_password"].as<std::string>();
 }
